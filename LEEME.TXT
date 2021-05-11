@@ -4,6 +4,8 @@
     UNIVERSIDAD LIBRE SECCIONAL CALI
     ELECTIVA PROFESIONAL - PARCIAL 2
 *********************************************************************
+GIT REPOSITORY : https://github.com/lcsr-rodriguez/SumaVentas.git
+*********************************************************************
     PASOS
 *********************************************************************
 1) INSTALAR EL MODULO DE AXIOS EN EL PROYECTO
@@ -13,3 +15,7 @@ $ npm i axios -S (Instala el modulo de axios)
 
 - O se puede usar el CDN
 $ <script src="https://unpkg.com/axios/dist/axios.min.js"></script> CDN
+
+2) INSTALAR EL MODULO DE JQUERY Y BOOTSTRAP PARA DESPUES GENERAR LOS ARCHIVOS .TXT
+$ npm install bootstrap
+$ npm install jquery

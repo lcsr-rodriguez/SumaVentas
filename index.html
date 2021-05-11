@@ -5,10 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="./node_modules/axios/dist/axios.min.js"></script>
     <script src="assets/js/generar_json.js"></script>
+    <script src="assets/js/FileSaver.js"></script>
 </head>
 <body>
     
+    <section class="jumbotron text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="jumbotron-heading">Generador de datos aleatorios</h1>
+                    <p class="lead text-muted">
+                        Genere datos falsos aleatorios y complete su aplicación para facilitar el desarrollo y las pruebas.
+                        Haga click en el siguiente botón para generar el archivo.
+                    </p>
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"><button type="button" class="btn btn-success" id="btn-generate">Generar</button></div>
+                <div class="col-md-3"></div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Scripts Bootstrap - Jquery -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $("#btn-generate").click(function() { 
+            var blob = new Blob(["This is my first text."], {type: "text/plain;charset=utf-8"});
+            saveAs(blob, "testfile1.txt");
+        });
+    </script>
 </body>
 </html>
