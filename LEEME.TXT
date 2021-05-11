@@ -1,0 +1,15 @@
+*********************************************************************
+    NOMBRE : LEINER CEBALLOS RODRIGUEZ
+    CÓDIGO : 154005
+    UNIVERSIDAD LIBRE SECCIONAL CALI
+    ELECTIVA PROFESIONAL - PARCIAL 2
+*********************************************************************
+    PASOS
+*********************************************************************
+1) INSTALAR EL MODULO DE AXIOS EN EL PROYECTO
+
+- Se puede instalar en la raiz 
+$ npm i axios -S (Instala el modulo de axios)
+
+- O se puede usar el CDN
+$ <script src="https://unpkg.com/axios/dist/axios.min.js"></script> CDN
