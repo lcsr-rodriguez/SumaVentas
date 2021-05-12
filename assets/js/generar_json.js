@@ -7,7 +7,7 @@
 // Retorna a partir de una promise un objeto JSON
 async function getRandomData() {
   try {
-    const data = await axios.get("https://random-data-api.com/api/commerce/random_commerce?size=1");
+    const data = await axios.get("https://random-data-api.com/api/commerce/random_commerce?size=100");
     var txt = objectToString(data);
     return txt;
   } catch(err) {
@@ -33,10 +33,10 @@ $(document).ready(function(){
   // Recuperar el dato asincrono
   var objeto = []
   
-  for(var i=0; i<4; i++) {
+  for(var i=0; i<100; i++) {
     getRandomData().then(v => {
       objeto.push(v);
-      //console.log(objeto);
+
     })
     .finally(() => {
       console.log("Promesa finalizada")
@@ -44,14 +44,15 @@ $(document).ready(function(){
   }
 
   setTimeout(function(){
-    //console.log(objeto);
      var data_txt = objeto;
-     //console.log(data_txt);
+     $("#btn-generate").attr("disabled", false); // habilita el boton
      $("#btn-generate").click(function() { 
+      var nombre_archivo = ( $("#input-file").val() != '' ) ? $("#input-file").val() :'default';
       var blob = new Blob([ objeto ], {type: "text/plain;charset=utf-8"});
-      saveAs(blob, "testfile1.txt");
+      saveAs(blob, nombre_archivo + ".txt");
+      location.reload();
     });
-    }, 10000); // 10 segundos
+    }, 5000); // 10 segundos
 
   
   
