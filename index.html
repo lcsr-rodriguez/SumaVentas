@@ -7,7 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="./node_modules/axios/dist/axios.min.js"></script>
-    <script src="assets/js/generar_json.js"></script>
     <script src="assets/js/FileSaver.js"></script>
 </head>
 <body>
@@ -15,17 +14,24 @@
     <section class="jumbotron text-center">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <h1 class="jumbotron-heading">Generador de datos aleatorios</h1>
                     <p class="lead text-muted">
-                        Genere datos falsos aleatorios y complete su aplicación para facilitar el desarrollo y las pruebas.
-                        Haga click en el siguiente botón para generar el archivo.
+                    Genere datos falsos aleatorios y complete su aplicación para facilitar el desarrollo y las pruebas.
+                    Haga click en el siguiente botón para generar</br> el archivo.
                     </p>
                 </div>
-                <div class="col-md-3"></div>
-                <div class="col-md-3"><button type="button" class="btn btn-success" id="btn-generate">Generar</button></div>
-                <div class="col-md-3"></div>
-                
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="">Nombre del archivo</span>
+                    </div>
+                    <input type="text" class="form-control" id="input-file">
+                    <button type="button" class="btn btn-success" id="btn-generate">Generar</button>
+                  </div>
             </div>
         </div>
     </section>
@@ -34,11 +40,8 @@
     <!-- Scripts Bootstrap - Jquery -->
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        $("#btn-generate").click(function() { 
-            var blob = new Blob(["This is my first text."], {type: "text/plain;charset=utf-8"});
-            saveAs(blob, "testfile1.txt");
-        });
-    </script>
+    <!-- Script Generar JSON -->
+    <script src="assets/js/generar_json.js"></script>
+       
 </body>
 </html>
