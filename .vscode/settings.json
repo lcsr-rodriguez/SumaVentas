@@ -1,0 +1,4 @@
+{
+    "json.maxItemsComputed": 2000000,
+    "editor.maxTokenizationLineLength": 4000000
+}
