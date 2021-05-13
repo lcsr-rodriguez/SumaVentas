@@ -45,7 +45,7 @@ $(document).ready(function(){
   }
 
   setTimeout(function(){
-     var data_txt = objeto;
+     let data_txt = objeto;
      $("#btn-generate").attr("disabled", false); // habilita el boton
      $("#input-nota").hide(); // esconde la advertencia
      $("#btn-generate").click(function() { 
@@ -54,7 +54,7 @@ $(document).ready(function(){
       saveAs(blob, nombre_archivo + ".json"); // guarda el archivo plano
       location.reload();
     });
-    }, 5000); // 5 segundos
+    }, 30000); // 30 segundos
 
   
   

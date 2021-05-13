@@ -19,3 +19,5 @@ $ <script src="https://unpkg.com/axios/dist/axios.min.js"></script> CDN
 2) INSTALAR EL MODULO DE JQUERY Y BOOTSTRAP PARA DESPUES GENERAR LOS ARCHIVOS .TXT
 $ npm install bootstrap
 $ npm install jquery
+
+NOTA :  EL ARCHVIO DE PYTHON SE ENCUENTRA EN  : SumaVentas/assets/py/suma.py
