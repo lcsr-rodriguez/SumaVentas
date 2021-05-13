@@ -62,11 +62,14 @@ def ventas_categoria(data, storage):
 if __name__ == '__main__':
     base = 'D:/Universidad/electiva_profesional/SumaVentas/'
     storage = base + 'storage/'
-    file = 'random_commerce1.json' # archivo
+    file = 'random_commerce5.json' # archivo
     ruta = os.path.join(base, file)
     data = get_data(ruta)
     # Por departamento
-    #ventas_departamento(data, storage)
+    ventas_departamento(data, storage)
+    # Por categoria
     ventas_categoria(data, storage)
-    #ventas_material(data, storage)
-    #ventas_color(data, storage)
+    # Por material
+    ventas_material(data, storage)
+    # Por color
+    ventas_color(data, storage)
